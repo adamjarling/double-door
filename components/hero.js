@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 
 function Hero({ bgImage, children }) {
-  console.log(`bgImage`, bgImage);
   return (
     <Flex
       w={"full"}

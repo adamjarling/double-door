@@ -5,7 +5,9 @@ import { Box, Container } from "@chakra-ui/react";
 function MiddleText({ children }) {
   return (
     <Container textAlign="center">
-      <Box py={20}>{children}</Box>
+      <Box py={20} textAlign="justify">
+        {children}
+      </Box>
     </Container>
   );
 }

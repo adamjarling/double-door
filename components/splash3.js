@@ -1,15 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Container, Image } from "@chakra-ui/react";
-import Hero from "components/hero";
+import { Container, Image } from "@chakra-ui/react";
+import { ParallaxBanner } from "react-scroll-parallax";
+import ParallaxBannerChildren from "components/ParallaxBannerChildren";
 
 function Splash3(props) {
   return (
-    <Hero bgImage={"images/RollingStones_431.jpg"}>
-      <Container>
-        <Image src="images/will-be-reborn.png" alt="Will be reborn" />
-      </Container>
-    </Hero>
+    <ParallaxBanner
+      layers={[
+        {
+          amount: 0.2,
+          image: "images/RollingStones_431.jpg",
+        },
+      ]}
+      style={{ height: "100vh" }}
+    >
+      <ParallaxBannerChildren>
+        <Container>
+          <Image src="images/will-be-reborn.png" alt="Will be reborn" />
+        </Container>
+      </ParallaxBannerChildren>
+    </ParallaxBanner>
   );
 }
 

@@ -1,15 +1,25 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Box, Container, Image } from "@chakra-ui/react";
-import Hero from "components/hero";
+import { ParallaxBanner, Parallax } from "react-scroll-parallax";
+import ParallaxBannerChildren from "components/ParallaxBannerChildren";
 
 function Splash2(props) {
   return (
-    <Hero bgImage={"images/pg2-2400px.jpg"}>
-      <Container>
-        <Image src="images/legendary-venue.png" />
-      </Container>
-    </Hero>
+    <ParallaxBanner
+      layers={[
+        {
+          amount: 0.2,
+          image: "images/pg2-2400px.jpg",
+        },
+      ]}
+      style={{ height: "100vh" }}
+    >
+      <ParallaxBannerChildren>
+        <Container>
+          <Image src="images/legendary-venue.png" />
+        </Container>
+      </ParallaxBannerChildren>
+    </ParallaxBanner>
   );
 }
 
