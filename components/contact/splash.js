@@ -14,7 +14,7 @@ import EmailButton from "components/contact/email-button";
 
 export default function ContactSplash() {
   return (
-    <Box as="section" py={20} bg="brand.pink.500">
+    <Box as="section" py={20} bg="brand.pink.500" id="contact-splash">
       <Container maxW="container.lg">
         <Flex direction="column" alignItems="center">
           <Image

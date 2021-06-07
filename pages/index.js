@@ -26,8 +26,11 @@ export default function Home() {
         <Splash2 />
         <Splash3 />
         <MiddleText>
-          Double Door has been bringing the best in live music to Chicago since
-          1994. For over two decades, Double Door called Chicago’s Wicker Park
+          <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
+            Double Door has been bringing the best in live music to Chicago
+            since 1994.
+          </Box>{" "}
+          For over two decades, Double Door called Chicago’s Wicker Park
           neighborhood home as a hub for progressive culture and music.
           Providing the community a place to gather while setting the stage for
           some of music’s most notable artists, including Liz Phair, The
@@ -37,10 +40,13 @@ export default function Home() {
         </MiddleText>
         <SplashHistory />
         <MiddleText>
-          In 2021, the Double Door will reopen in the Uptown neighborhood of
-          Chicago. Joining the city’s original entertainment district, Double
-          Door brings new life to an over 100-year-old vaudeville theater as a
-          place for fans to meet and watch some of the city’s best live music.{" "}
+          <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
+            In 2021, the Double Door will reopen in the Uptown neighborhood of
+            Chicago.
+          </Box>{" "}
+          Joining the city’s original entertainment district, Double Door brings
+          new life to an over 100-year-old vaudeville theater as a place for
+          fans to meet and watch some of the city’s best live music.{" "}
         </MiddleText>
         <InstagramSplash />
         <ContactSplash />

@@ -1,65 +1,71 @@
 import React from "react";
-import {
-  Box,
-  Stack,
-  Heading,
-  Flex,
-  Text,
-  Button,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { Flex, Link, Stack } from "@chakra-ui/react";
+import { FaFacebook, FaInstagramSquare, FaTwitterSquare } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { socialMediaLinks } from "global-vars";
+
+const button = {
+  rest: { scale: 1 },
+  hover: { scale: 0.9 },
+  pressed: { scale: 0.95 },
+};
+
+const NavMotionLink = ({ href = "#", children }) => (
+  <motion.div
+    variants={button}
+    initial="rest"
+    whileHover="hover"
+    whileTap="pressed"
+  >
+    <Link href={href} isExternal colorScheme="brand.yellow">
+      {children}
+    </Link>
+  </motion.div>
+);
 
 const Navbar = (props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleToggle = () => (isOpen ? onClose() : onOpen());
-
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const el = document.getElementById("contact-splash");
+    window.scrollTo({ top: el.offsetTop, behavior: "smooth" });
+  };
   return (
     <Flex
       as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      px={6}
-      py={2}
+      alignItems="center"
+      position="fixed"
+      h="50px"
       bg="black"
-      color="white"
-      {...props}
+      w="100%"
+      zIndex={2}
+      textTransform="uppercase"
     >
-      <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-          Double Door
-        </Heading>
-      </Flex>
-
-      <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-        <HamburgerIcon />
-      </Box>
-
       <Stack
-        direction={{ base: "column", md: "row" }}
-        display={{ base: isOpen ? "block" : "none", md: "flex" }}
-        width={{ base: "full", md: "auto" }}
-        alignItems="center"
-        flexGrow={1}
-        mt={{ base: 4, md: 0 }}
+        ml={5}
+        spacing={5}
+        direction="row"
+        fontSize="3xl"
+        //color="brand.yellow.500"
       >
-        <Text>Instagram</Text>
-        <Text>Facebook</Text>
-        <Text>Contact</Text>
-      </Stack>
+        <NavMotionLink href={socialMediaLinks.facebook}>
+          <FaFacebook />
+        </NavMotionLink>
 
-      {/* <Box
-        display={{ base: isOpen ? "block" : "none", md: "block" }}
-        mt={{ base: 4, md: 0 }}
+        <NavMotionLink href={socialMediaLinks.instagram}>
+          <FaInstagramSquare />
+        </NavMotionLink>
+        <NavMotionLink href={socialMediaLinks.twitter}>
+          <FaTwitterSquare />
+        </NavMotionLink>
+      </Stack>
+      <Link
+        ml={5}
+        href="#contact-splash"
+        fontFamily="Gotham-Bold"
+        onClick={handleContactClick}
       >
-        <Button
-          variant="outline"
-          _hover={{ bg: "teal.700", borderColor: "teal.700" }}
-        >
-          Create account
-        </Button>
-      </Box> */}
+        Contact
+      </Link>
     </Flex>
   );
 };
