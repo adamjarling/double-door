@@ -51,12 +51,15 @@ const theme = extendTheme({
       body: {
         bg: "black",
         color: "white",
+        fontSize: "1.2rem",
       },
       // styles for the `a`
       a: {
-        color: "brand.pink.500",
+        opacity: "100%",
         _hover: {
-          textDecoration: "underline",
+          opacity: "70%",
+          transition: "opacity 0.5s",
+          textDecoraction: "none",
         },
       },
     },

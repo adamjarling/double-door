@@ -5,12 +5,16 @@ import {
   Container,
   Flex,
   Heading,
+  Image,
   Link,
   Stack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { FaFacebook, FaInstagramSquare, FaTwitterSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { socialMediaLinks } from "global-vars";
+import TwitterIcon from "public/images/social-icons_TW.svg";
+import FBIcon from "public/images/social-icons_FB.svg";
+import InstagramIcon from "public/images/social-icons_IG.svg";
 
 const button = {
   rest: { scale: 1 },
@@ -25,13 +29,19 @@ const NavMotionLink = ({ href = "#", children }) => (
     whileHover="hover"
     whileTap="pressed"
   >
-    <Link href={href} isExternal colorScheme="brand.yellow">
+    <Link href={href} isExternal>
       {children}
     </Link>
   </motion.div>
 );
 
 export default function InstagramSplash() {
+  const iconSize = useBreakpointValue({
+    base: "70px",
+    sm: "80px",
+    md: "90px",
+  });
+
   return (
     <Box as="section" py={20} bg="gray.300">
       <Container>
@@ -52,15 +62,16 @@ export default function InstagramSplash() {
             mt={2}
             fontSize="6xl"
             color="black"
+            spacing="24px"
           >
             <NavMotionLink href={socialMediaLinks.facebook}>
-              <FaFacebook />
+              <FBIcon width={iconSize} />
             </NavMotionLink>
             <NavMotionLink href={socialMediaLinks.instagram}>
-              <FaInstagramSquare />
+              <InstagramIcon width={iconSize} />
             </NavMotionLink>
             <NavMotionLink href={socialMediaLinks.twitter}>
-              <FaTwitterSquare />
+              <TwitterIcon width={iconSize} />
             </NavMotionLink>
           </Stack>
         </Flex>

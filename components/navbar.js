@@ -1,8 +1,10 @@
 import React from "react";
 import { Flex, Link, Stack } from "@chakra-ui/react";
-import { FaFacebook, FaInstagramSquare, FaTwitterSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { socialMediaLinks } from "global-vars";
+import TwitterIcon from "public/images/social-icons_TW.svg";
+import FBIcon from "public/images/social-icons_FB.svg";
+import InstagramIcon from "public/images/social-icons_IG.svg";
 
 const button = {
   rest: { scale: 1 },
@@ -17,7 +19,7 @@ const NavMotionLink = ({ href = "#", children }) => (
     whileHover="hover"
     whileTap="pressed"
   >
-    <Link href={href} isExternal colorScheme="brand.yellow">
+    <Link href={href} isExternal>
       {children}
     </Link>
   </motion.div>
@@ -29,6 +31,9 @@ const Navbar = (props) => {
     const el = document.getElementById("contact-splash");
     window.scrollTo({ top: el.offsetTop, behavior: "smooth" });
   };
+
+  const iconSize = "30";
+
   return (
     <Flex
       as="nav"
@@ -40,22 +45,15 @@ const Navbar = (props) => {
       zIndex={2}
       textTransform="uppercase"
     >
-      <Stack
-        ml={5}
-        spacing={5}
-        direction="row"
-        fontSize="3xl"
-        //color="brand.yellow.500"
-      >
+      <Stack ml={5} spacing={[4, 5]} direction="row">
         <NavMotionLink href={socialMediaLinks.facebook}>
-          <FaFacebook />
+          <FBIcon height={iconSize} width={iconSize} fill="#ccc" />
         </NavMotionLink>
-
         <NavMotionLink href={socialMediaLinks.instagram}>
-          <FaInstagramSquare />
+          <InstagramIcon height={iconSize} width={iconSize} fill="#ccc" />
         </NavMotionLink>
         <NavMotionLink href={socialMediaLinks.twitter}>
-          <FaTwitterSquare />
+          <TwitterIcon height={iconSize} width={iconSize} fill="#ccc" />
         </NavMotionLink>
       </Stack>
       <Link

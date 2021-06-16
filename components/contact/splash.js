@@ -1,28 +1,38 @@
 import React from "react";
 import {
   Box,
-  Button,
   Container,
   Flex,
-  Heading,
   Image,
-  SimpleGrid,
-  Text,
+  Link,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import ContactBox from "components/contact/box";
 import EmailButton from "components/contact/email-button";
+import { Parallax } from "react-scroll-parallax";
+import DDLogo from "public/images/double-door-logo.svg";
 
 export default function ContactSplash() {
+  const logoSize = useBreakpointValue({ base: "200px", md: "220px" });
+
   return (
     <Box as="section" py={20} bg="brand.pink.500" id="contact-splash">
       <Container maxW="container.lg">
         <Flex direction="column" alignItems="center">
-          <Image
-            src="/images/doubledoor_2013logo_bw.png"
-            boxSize={{ base: "200px", md: "220px" }}
-            mb="50px"
-          />
-          <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="20px">
+          <Parallax y={[-20, 20]} tagOuter="figure">
+            <Box mb="40px">
+              <DDLogo width={logoSize} />
+            </Box>
+          </Parallax>
+
+          <ContactBox>
+            <Box>
+              <Link href="mailto:info@doubledoor.com">info@doubledoor.com</Link>
+            </Box>
+
+            <EmailButton mailTo="info@doubledoor.com" />
+          </ContactBox>
+          {/* <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="20px">
             <ContactBox>
               <Heading as="h3" size="md">
                 Sean Mulroney
@@ -59,7 +69,7 @@ export default function ContactSplash() {
               <Text>312-834-4054</Text>
               <EmailButton mailTo="joel.morales@ext54.com" />
             </ContactBox>
-          </SimpleGrid>
+          </SimpleGrid> */}
         </Flex>
       </Container>
     </Box>

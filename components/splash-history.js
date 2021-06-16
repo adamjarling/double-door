@@ -1,11 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Container, Image } from "@chakra-ui/react";
+import { Box, Container, Image, useBreakpointValue } from "@chakra-ui/react";
 import Hero from "components/hero";
 import { ParallaxBanner } from "react-scroll-parallax";
 import ParallaxBannerChildren from "components/ParallaxBannerChildren";
 
 function SplashHistory(props) {
+  const bgImageSize = useBreakpointValue({
+    base: "50vh",
+    md: "80vh",
+    lg: "90vh",
+    xl: "100vh",
+  });
   return (
     <ParallaxBanner
       layers={[
@@ -14,7 +20,7 @@ function SplashHistory(props) {
           image: "images/Theater_new_IMG_1810.jpg",
         },
       ]}
-      style={{ height: "100vh" }}
+      style={{ height: bgImageSize }}
     >
       <ParallaxBannerChildren>
         <Container>
