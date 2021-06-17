@@ -57,7 +57,6 @@ export default function InstagramSplash() {
           <Stack
             direction="row"
             alignItems="center"
-            bg="brand.pink.500"
             padding={4}
             mt={2}
             fontSize="6xl"
