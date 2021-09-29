@@ -8,18 +8,25 @@ import {
   FormControl,
   FormLabel,
   FormHelperText,
-  Input,
+  Link,
 } from "@chakra-ui/react";
 
 function Signup(props) {
   return (
     <Container py="5rem">
-      <Flex>
-        <FormControl id="email">
-          <FormLabel>Sign up for our email list</FormLabel>
-          <Input type="email" />
-          <FormHelperText>We'll never share your email.</FormHelperText>
-        </FormControl>
+      <Flex alignItems="center" justifyContent="center">
+        <Link
+          href="http://eepurl.com/-kh_j"
+          isExternal
+          textTransform="uppercase"
+          background={"brand.yellow.500"}
+          padding="5"
+          textColor="black"
+          fontWeight="bold"
+          fontSize={{ base: "md", md: "2xl" }}
+        >
+          Sign up for the Mailing List
+        </Link>
       </Flex>
     </Container>
   );

@@ -19,7 +19,6 @@ export default function Home() {
         <Fonts />
         <Head>
           <title>Double Door</title>
-          <link rel="icon" href="/favicon.ico" />
         </Head>
         <Splash1 />
         <Signup />

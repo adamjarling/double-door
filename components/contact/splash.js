@@ -26,11 +26,17 @@ export default function ContactSplash() {
           </Parallax>
 
           <ContactBox>
-            <Box>
-              <Link href="mailto:sean@doubledoor.com">sean@doubledoor.com</Link>
-            </Box>
-
-            <EmailButton mailTo="sean@doubledoor.com" />
+            <Link
+              href="mailto:sean@doubledoor.com"
+              isExternal
+              textTransform="uppercase"
+              background={"brand.blue.500"}
+              padding="5"
+              fontWeight="bold"
+              fontSize={{ base: "md", md: "2xl" }}
+            >
+              Email the Double Door
+            </Link>
           </ContactBox>
           {/* <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="20px">
             <ContactBox>
