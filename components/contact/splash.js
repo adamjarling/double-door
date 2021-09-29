@@ -27,10 +27,10 @@ export default function ContactSplash() {
 
           <ContactBox>
             <Box>
-              <Link href="mailto:info@doubledoor.com">info@doubledoor.com</Link>
+              <Link href="mailto:sean@doubledoor.com">sean@doubledoor.com</Link>
             </Box>
 
-            <EmailButton mailTo="info@doubledoor.com" />
+            <EmailButton mailTo="sean@doubledoor.com" />
           </ContactBox>
           {/* <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing="20px">
             <ContactBox>
