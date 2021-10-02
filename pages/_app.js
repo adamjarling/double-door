@@ -56,10 +56,11 @@ const theme = extendTheme({
       // styles for the `a`
       a: {
         opacity: "100%",
+        borderBottom: "1px dashed",
         _hover: {
           opacity: "70%",
           transition: "opacity 0.5s",
-          textDecoraction: "none",
+          textDecoration: "none",
         },
       },
     },

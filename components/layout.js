@@ -31,7 +31,7 @@ function Layout({ children }) {
         />
         <meta name="twitter:image" content={fullImageURL} />
       </Head>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>{children}</main>
     </Box>
   );

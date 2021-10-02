@@ -5,10 +5,10 @@ import Splash1 from "components/splash1";
 import Splash2 from "components/splash2";
 import Splash3 from "components/splash3";
 import SplashHistory from "components/splash-history";
-import Signup from "components/signup";
+import SundayJams from "components/sunday-jams";
 import MiddleText from "components/middle-text";
 import Fonts from "components/fonts";
-import InstagramSplash from "components/instagram/splash";
+import FollowUs from "components/follow-us";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ContactSplash from "components/contact/splash";
 
@@ -21,7 +21,7 @@ export default function Home() {
           <title>Double Door</title>
         </Head>
         <Splash1 />
-        <Signup />
+        <SundayJams />
         <Splash2 />
         <Splash3 />
         <MiddleText>
@@ -47,7 +47,7 @@ export default function Home() {
           new life to an over 100-year-old vaudeville theater as a place for
           fans to meet and watch some of the city’s best live music.{" "}
         </MiddleText>
-        <InstagramSplash />
+        <FollowUs />
         <ContactSplash />
       </Layout>
     </ParallaxProvider>

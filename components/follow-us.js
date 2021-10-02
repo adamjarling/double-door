@@ -8,6 +8,7 @@ import {
   Image,
   Link,
   Stack,
+  VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -15,6 +16,7 @@ import { socialMediaLinks } from "global-vars";
 import TwitterIcon from "public/images/social-icons_TW.svg";
 import FBIcon from "public/images/social-icons_FB.svg";
 import InstagramIcon from "public/images/social-icons_IG.svg";
+import BigButton from "components/big-button";
 
 const button = {
   rest: { scale: 1 },
@@ -35,7 +37,7 @@ const NavMotionLink = ({ href = "#", children }) => (
   </motion.div>
 );
 
-export default function InstagramSplash() {
+export default function FollowUs() {
   const iconSize = useBreakpointValue({
     base: "70px",
     sm: "80px",
@@ -45,7 +47,7 @@ export default function InstagramSplash() {
   return (
     <Box as="section" py={20} bg="gray.300">
       <Container>
-        <Flex direction="column" alignItems="center">
+        <VStack spacing={3}>
           <Center>
             <Heading as="h2" size="2xl" fontFamily="Phosphate">
               Follow{" "}
@@ -73,7 +75,10 @@ export default function InstagramSplash() {
               <TwitterIcon width={iconSize} />
             </NavMotionLink>
           </Stack>
-        </Flex>
+          <BigButton href="http://eepurl.com/-kh_j" isExternal isBlue>
+            Sign up for the Mailing List
+          </BigButton>
+        </VStack>
       </Container>
     </Box>
   );
