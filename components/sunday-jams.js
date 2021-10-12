@@ -1,22 +1,31 @@
 import React from "react";
-import { Box, Container, Flex, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import BigButton from "./big-button";
 import Obfuscate from "react-obfuscate";
 import { AspectRatio } from "@chakra-ui/react";
+import { FaAmazon, FaApple, FaYoutube, FaSpotify } from "react-icons/fa";
 
 function SundayJams(props) {
   return (
     <Container pt="8" pb="12">
-      <VStack spacing="8">
+      <VStack spacing="10">
         <Box position="relative" paddingBottom="56.25%" h="0" width="100%">
           <iframe
             width="560"
             height="315"
             src="https://www.youtube.com/embed/k8b5ZhP4-3U"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             style={{
               position: "absolute",
               top: 0,
@@ -44,16 +53,50 @@ function SundayJams(props) {
             RSVP to attend Sunday Jams
           </BigButton>
         </Box>
-        <Box>
+        <Box textAlign="center">
+          <Text paddingBottom="2">Podcast Episode #2</Text>
           <iframe
             title="Libsyn Player"
             style={{ border: "none" }}
-            src="//html5-player.libsyn.com/embed/episode/id/20470658/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
+            src="//html5-player.libsyn.com/embed/episode/id/20606324/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
             height="90"
             width="100%"
             scrolling="no"
             allowFullScreen
           ></iframe>
+          <Box paddingTop="3">Subscribe to the Double Door podcast:</Box>
+          <HStack
+            spacing="6"
+            marginTop="2"
+            align="center"
+            justify="center"
+            fontSize="4xl"
+          >
+            <Link
+              isExternal
+              href="https://open.spotify.com/show/3lsLrUeZLIA0kc3F9UlSE8"
+            >
+              <FaSpotify />
+            </Link>
+            <Link
+              isExternal
+              href="https://music.amazon.com/podcasts/2efbf27e-6264-49f9-8f85-240e3e8ffeb6/doubledoor's-podcast"
+            >
+              <FaAmazon />
+            </Link>
+            <Link
+              isExternal
+              href="https://podcasts.apple.com/us/podcast/doubledoors-podcast/id1585848176"
+            >
+              <FaApple />
+            </Link>
+            <Link
+              isExternal
+              href="https://podcasts.google.com/feed/aHR0cHM6Ly9kb3VibGVkb29yLmxpYnN5bi5jb20vcnNz"
+            >
+              <FaYoutube />
+            </Link>
+          </HStack>
         </Box>
       </VStack>
     </Container>
