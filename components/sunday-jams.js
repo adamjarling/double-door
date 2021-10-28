@@ -22,6 +22,26 @@ import Obfuscate from "react-obfuscate";
 import { AspectRatio } from "@chakra-ui/react";
 import { FaAmazon, FaApple, FaYoutube, FaSpotify } from "react-icons/fa";
 
+const podcasts = [
+  "//html5-player.libsyn.com/embed/episode/id/20772377/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
+  "//html5-player.libsyn.com/embed/episode/id/20606324/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
+  "//html5-player.libsyn.com/embed/episode/id/20470658/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
+];
+
+function PodCastWrapper({ src }) {
+  return (
+    <iframe
+      title="Libsyn Player"
+      style={{ border: "none" }}
+      src={src}
+      height="90"
+      width="100%"
+      scrolling="no"
+      allowFullScreen
+    ></iframe>
+  );
+}
+
 function SundayJams(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -71,16 +91,8 @@ function SundayJams(props) {
             </BigButton>
           </Box>
           <Box textAlign="center">
-            <Text paddingBottom="2">Podcast Episode #2</Text>
-            <iframe
-              title="Libsyn Player"
-              style={{ border: "none" }}
-              src="//html5-player.libsyn.com/embed/episode/id/20606324/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
-              height="90"
-              width="100%"
-              scrolling="no"
-              allowFullScreen
-            ></iframe>
+            <Text paddingBottom="2">Podcast Episode #{podcasts.length}</Text>
+            <PodCastWrapper src={podcasts[0]} />
             <Box paddingTop="3">Subscribe to the Double Door podcast:</Box>
             <HStack
               spacing="6"
@@ -134,32 +146,13 @@ function SundayJams(props) {
 
           <DrawerBody>
             <VStack spacing="4">
-              <iframe
-                title="Libsyn Player"
-                style={{ border: "none" }}
-                src="//html5-player.libsyn.com/embed/episode/id/20470658/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
-                height="90"
-                width="100%"
-                scrolling="no"
-                allowFullScreen
-              ></iframe>
-              <iframe
-                title="Libsyn Player"
-                style={{ border: "none" }}
-                src="//html5-player.libsyn.com/embed/episode/id/20606324/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
-                height="90"
-                width="100%"
-                scrolling="no"
-                allowFullScreen
-              ></iframe>
+              {podcasts.map((podcast) => (
+                <PodCastWrapper src={podcast} />
+              ))}
             </VStack>
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </DrawerFooter>
+          <DrawerFooter></DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>
