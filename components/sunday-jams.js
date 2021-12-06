@@ -23,6 +23,8 @@ import { AspectRatio } from "@chakra-ui/react";
 import { FaAmazon, FaApple, FaYoutube, FaSpotify } from "react-icons/fa";
 
 const podcasts = [
+  "//html5-player.libsyn.com/embed/episode/id/21079982/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
+  "//html5-player.libsyn.com/embed/episode/id/20921822/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
   "//html5-player.libsyn.com/embed/episode/id/20772377/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
   "//html5-player.libsyn.com/embed/episode/id/20606324/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
   "//html5-player.libsyn.com/embed/episode/id/20470658/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/",
@@ -91,12 +93,15 @@ function SundayJams(props) {
             </BigButton>
           </Box>
           <Box textAlign="center">
-            <Text paddingBottom="2">Podcast Episode #{podcasts.length}</Text>
-            <PodCastWrapper src={podcasts[0]} />
-            <Box paddingTop="3">Subscribe to the Double Door podcast:</Box>
+            {/* <Text paddingBottom="2">Podcast Episode #{podcasts.length}</Text> */}
+
+            <Box paddingTop="6" fontSize="2xl">
+              Subscribe to the Double Door podcast:
+            </Box>
             <HStack
               spacing="6"
               marginTop="2"
+              marginBottom="8"
               align="center"
               justify="center"
               fontSize="4xl"
@@ -126,10 +131,9 @@ function SundayJams(props) {
                 <FaYoutube />
               </Link>
             </HStack>
+            <PodCastWrapper src={podcasts[0]} />
           </Box>
-          <BigButton isBlue onClick={onOpen}>
-            View All Podcasts
-          </BigButton>
+          <BigButton onClick={onOpen}>View All Podcasts</BigButton>
         </VStack>
       </Container>
       <Drawer
@@ -145,7 +149,7 @@ function SundayJams(props) {
           <DrawerHeader>All Double Door Podcasts</DrawerHeader>
 
           <DrawerBody>
-            <VStack spacing="4">
+            <VStack spacing="10">
               {podcasts.map((podcast) => (
                 <PodCastWrapper src={podcast} />
               ))}
