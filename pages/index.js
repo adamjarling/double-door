@@ -21,6 +21,7 @@ export default function Home() {
           <title>Double Door</title>
         </Head>
         <Splash1 />
+
         <SundayJams />
         <Splash2 />
         <Splash3 />
