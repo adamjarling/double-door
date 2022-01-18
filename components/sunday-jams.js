@@ -53,6 +53,16 @@ function SundayJams(props) {
       <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={10}>
         <AspectRatio ratio={16 / 9}>
           <iframe
+            src="https://open.spotify.com/embed/episode/4ypUFChQGMfKkGWiCdAqIu?utm_source=generator"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </AspectRatio>
+        <AspectRatio ratio={16 / 9}>
+          <iframe
             src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcarconcarne%2Fvideos%2F599699664437626%2F&show_text=false&width=560&t=0"
             scrolling="no"
             frameBorder={0}
