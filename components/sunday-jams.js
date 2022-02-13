@@ -53,6 +53,17 @@ function SundayJams(props) {
       <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={10}>
         <AspectRatio ratio={16 / 9}>
           <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/46WPV30o5Ng"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </AspectRatio>
+        <AspectRatio ratio={16 / 9}>
+          <iframe
             src="https://open.spotify.com/embed/episode/4ypUFChQGMfKkGWiCdAqIu?utm_source=generator"
             width="100%"
             height="232"
