@@ -51,6 +51,26 @@ function SundayJams(props) {
       </Box>
 
       <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={10}>
+        <Box>
+          <iframe
+            src="https://open.spotify.com/embed/episode/4tQalYCdavGe9GTexF47i9?utm_source=generator"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </Box>
+        <Box>
+          <iframe
+            src="https://open.spotify.com/embed/episode/0LnE0NQABFcl2iZddx1n5q?utm_source=generator"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </Box>
         <AspectRatio ratio={16 / 9}>
           <iframe
             width="560"
@@ -59,7 +79,7 @@ function SundayJams(props) {
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </AspectRatio>
         <AspectRatio ratio={16 / 9}>
