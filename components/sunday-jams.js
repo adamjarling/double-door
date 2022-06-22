@@ -52,6 +52,26 @@ function SundayJams(props) {
       <SimpleGrid columns={[1, 2, 2, 2, 3]} spacing={10}>
         <Box>
           <iframe
+            src="https://open.spotify.com/embed/episode/6PS3ZWiO3o2HYX3zJb1NV3?utm_source=generator"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </Box>
+        <Box>
+          <iframe
+            src="https://open.spotify.com/embed/episode/3xuAmUoG9GfIo37gw4UP97?utm_source=generator"
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </Box>
+        <Box>
+          <iframe
             src="https://open.spotify.com/embed/episode/3zK7DMGWYEQ66UFgrktzIJ?utm_source=generator"
             width="100%"
             height="232"
