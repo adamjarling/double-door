@@ -1,16 +1,17 @@
+import { Box, Center, Container, Image, Link } from "@chakra-ui/react";
+
+import ContactSplash from "components/contact/splash";
+import FollowUs from "components/follow-us";
+import Fonts from "components/fonts";
 import Head from "next/head";
-import { Box, Container } from "@chakra-ui/react";
 import Layout from "components/layout";
+import MiddleText from "components/middle-text";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Splash1 from "components/splash1";
 import Splash2 from "components/splash2";
 import Splash3 from "components/splash3";
 import SplashHistory from "components/splash-history";
 import SundayJams from "components/sunday-jams";
-import MiddleText from "components/middle-text";
-import Fonts from "components/fonts";
-import FollowUs from "components/follow-us";
-import { ParallaxProvider } from "react-scroll-parallax";
-import ContactSplash from "components/contact/splash";
 
 export default function Home() {
   return (
@@ -22,7 +23,6 @@ export default function Home() {
         </Head>
         <Splash1 />
 
-        <SundayJams />
         <Splash2 />
         <Splash3 />
         <MiddleText>
@@ -38,6 +38,18 @@ export default function Home() {
           The Killers, Kanye West, Kings of Leon, John Legend, Sonic Youth, and
           many others.
         </MiddleText>
+
+        <Container mb={12}>
+          <Center>
+            <Link
+              href="https://www.cbsnews.com/chicago/news/double-door-new-home-uptown-wilson-theater/"
+              isExternal
+            >
+              <Image src="/images/cbs-news-promo.png" alt="CBS News promo" />
+            </Link>
+          </Center>
+        </Container>
+
         <SplashHistory />
         <MiddleText>
           <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
