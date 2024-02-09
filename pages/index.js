@@ -53,7 +53,7 @@ export default function Home() {
         <SplashHistory />
         <MiddleText>
           <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
-            In 2022, the Double Door will reopen in the Uptown neighborhood of
+            The Double Door will soon reopen in the Uptown neighborhood of
             Chicago.
           </Box>{" "}
           Joining the city’s original entertainment district, Double Door brings
