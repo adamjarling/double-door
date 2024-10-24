@@ -75,9 +75,9 @@ export default function FollowUs() {
               <TwitterIcon width={iconSize} />
             </NavMotionLink>
           </Stack>
-          <BigButton href="http://eepurl.com/-kh_j" isExternal isBlue>
+          {/* <BigButton href="http://eepurl.com/-kh_j" isExternal isBlue>
             Sign up for the Mailing List
-          </BigButton>
+          </BigButton> */}
         </VStack>
       </Container>
     </Box>
