@@ -27,7 +27,7 @@ function Layout({ children }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Double Door has been bringing the best in live music to Chicago since 1994.  In 2022, the Double Door will reopen in the Uptown neighborhood of Chicago. Joining the city’s original entertainment district, Double Door brings new life to an over 100-year-old vaudeville theater as a place for fans to meet and watch some of the city’s best live music."
+          content="Double Door has been bringing the best in live music to Chicago since 1994. This isn’t an ending — it’s a pivot. We’re keeping the brand alive through pop-ups and collaborations. Our first step is a collaboration with Gallery Cabaret in Bucktown."
         />
         <meta name="twitter:image" content={fullImageURL} />
       </Head>

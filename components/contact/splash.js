@@ -31,11 +31,6 @@ export default function ContactSplash() {
             >
               Email the Double Door
             </Obfuscate>
-            <Box as="p" textAlign="center">
-              1050 W Wilson Ave,
-              <br />
-              Chicago, IL 60640
-            </Box>
           </VStack>
         </Flex>
       </Container>

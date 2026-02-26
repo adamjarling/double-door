@@ -1,4 +1,4 @@
-import { Box, Center, Container, Image, Link } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 import ContactSplash from "components/contact/splash";
 import FollowUs from "components/follow-us";
@@ -39,26 +39,38 @@ export default function Home() {
           many others.
         </MiddleText>
 
-        <Container mb={12}>
-          <Center>
-            <Link
-              href="https://www.cbsnews.com/chicago/news/double-door-new-home-uptown-wilson-theater/"
-              isExternal
-            >
-              <Image src="/images/cbs-news-promo.png" alt="CBS News promo" />
-            </Link>
-          </Center>
-        </Container>
-
         <SplashHistory />
         <MiddleText>
+          It has been a long road. We want to share an update, albeit a painful
+          one for our artists and supporters. The opening of Double Door in the
+          Uptown Wilson Theatre location as previously announced is not moving
+          forward. Staying true to what made Double Door Double Door matters.{" "}
           <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
-            The Double Door will soon reopen in the Uptown neighborhood of
-            Chicago.
+            This isn&apos;t an ending &mdash; it&apos;s a pivot.
           </Box>{" "}
-          Joining the city’s original entertainment district, Double Door brings
-          new life to an over 100-year-old vaudeville theater as a place for
-          fans to meet and watch some of the city’s best live music.{" "}
+          We&apos;re actively exploring other locations and opportunities that
+          better align with our vision. This is all in an effort to keep the
+          heart and soul of music and the Double Door moving forward.
+        </MiddleText>
+        <MiddleText>
+          In the meantime, we&apos;re keeping the brand alive through pop-ups,
+          collaborations, and special moments. Our first step is a collaboration
+          with{" "}
+          <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
+            Gallery Cabaret in Bucktown.
+          </Box>{" "}
+          For almost 40 years Gallery Cabaret has been a haven for artists and
+          musicians looking to showcase their craft in an eclectic neighborhood
+          setting. We are updating the sound, the music calendar, and the
+          overall vibe that made Double Door the best place to see music &mdash;
+          but more importantly, to be part of what makes Chicago&apos;s scene
+          the best in the country. We will be reopening the bar on March 1st.
+          Come and see us at 2020 N. Oakley starting at 5 pm. We&apos;ll have
+          music, booze, laughs, and good times! We hope you&apos;ll stay with
+          us, follow along, and be part of what comes next.{" "}
+          <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
+            Double Door Rocks!
+          </Box>
         </MiddleText>
         <FollowUs />
         <ContactSplash />

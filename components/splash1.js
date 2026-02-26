@@ -22,9 +22,6 @@ function Splash1(props) {
             src="images/doubledoor_logo_red.png"
             alt="Double Door logo"
           />
-          <Box pt={{ base: 5, lg: 5 }}>
-            <Image src="images/movin-uptown.png" alt="Moving on Uptown" />
-          </Box>
         </Container>
       </ParallaxBannerChildren>
     </ParallaxBanner>
