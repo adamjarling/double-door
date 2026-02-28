@@ -23,7 +23,7 @@ function SplashHistory(props) {
       style={{ height: bgImageSize }}
     >
       <ParallaxBannerChildren>
-        <Container>
+        <Container display="flex" justifyContent="center">
           <Image src="images/making-history.png" alt="Making history" />
         </Container>
       </ParallaxBannerChildren>

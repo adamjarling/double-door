@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/react";
-
 import ContactSplash from "components/contact/splash";
 import FollowUs from "components/follow-us";
 import Fonts from "components/fonts";
@@ -22,10 +21,7 @@ export default function Home() {
           <title>Double Door</title>
         </Head>
         <Splash1 />
-
-        <Splash2 />
-        <Splash3 />
-        <MiddleText>
+<MiddleText>
           <Box as="span" color="brand.pink.500" fontFamily="Gotham-bold">
             Double Door has been bringing the best in live music to Chicago
             since 1994.
@@ -39,7 +35,10 @@ export default function Home() {
           many others.
         </MiddleText>
 
-        <SplashHistory />
+        <Splash2 />
+
+
+
         <MiddleText>
           It has been a long road. We want to share an update, albeit a painful
           one for our artists and supporters. The opening of Double Door in the
@@ -52,6 +51,8 @@ export default function Home() {
           better align with our vision. This is all in an effort to keep the
           heart and soul of music and the Double Door moving forward.
         </MiddleText>
+
+        <Splash3 />
         <MiddleText>
           In the meantime, we&apos;re keeping the brand alive through pop-ups,
           collaborations, and special moments. Our first step is a collaboration

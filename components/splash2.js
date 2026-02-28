@@ -15,7 +15,7 @@ function Splash2(props) {
       style={{ height: "100vh" }}
     >
       <ParallaxBannerChildren>
-        <Container>
+        <Container display="flex" justifyContent="center">
           <Image src="images/legendary-venue.png" />
         </Container>
       </ParallaxBannerChildren>

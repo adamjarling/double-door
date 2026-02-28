@@ -16,7 +16,7 @@ function Splash3(props) {
       style={{ height: "100vh" }}
     >
       <ParallaxBannerChildren>
-        <Container>
+        <Container display="flex" justifyContent="center">
           <Image src="images/will-be-reborn.png" alt="Will be reborn" />
         </Container>
       </ParallaxBannerChildren>
